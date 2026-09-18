@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#091827">
+  <meta name="description" content="Bharat Institute of Technology — practical technology learning, course pathways and authorised certificate verification.">
+  <title>Bharat Institute of Technology — Build what comes next.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Bharat Institute of Technology home">
+      <span class="brand-mark">B<span>IT</span></span>
+      <span class="brand-name">BHARAT INSTITUTE<span>OF TECHNOLOGY</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation">☰</button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#courses" data-nav="courses">Our courses</a>
+      <a href="#about" data-nav="about">The BIT approach</a>
+      <a href="#certificates" data-nav="certificates">Certificate studio</a>
+      <a href="#verify" data-nav="verify">Verify</a>
+      <a href="#admin" data-nav="admin" class="nav-admin">Admin</a>
+    </nav>
+    <a class="button button-small header-cta" href="#courses">Find your course <span>↗</span></a>
+  </header>
+
+  <main id="main">
+    <section id="home" class="view">
+      <div class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="line"></span> YOUR NEXT CHAPTER STARTS HERE</p>
+          <h1>Build skills.<br>Think bigger.<br><em>Go further.</em></h1>
+          <p class="hero-description">Practical learning paths for the next generation of builders — from computer foundations to full-stack development, AI tools and business.</p>
+          <div class="hero-actions">
+            <a href="#courses" class="button">Explore courses <span>↗</span></a>
+            <a class="text-link" href="#about">Discover BIT <span>→</span></a>
+          </div>
+          <div class="hero-note"><span class="tiny-icon">⌘</span><span>Start with the fundamentals.<br><strong>Build something that matters.</strong></span></div>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="scene-glow scene-glow-one" aria-hidden="true"></div>
+          <div class="scene-glow scene-glow-two" aria-hidden="true"></div>
+          <div class="scene-stage" aria-hidden="true">
+            <div class="depth-card depth-card-a"><span>01</span><strong>LEARN</strong><small>Start with clarity</small></div>
+            <div class="depth-card depth-card-b"><span>02</span><strong>CREATE</strong><small>Make it tangible</small></div>
+            <div class="depth-card depth-card-c"><span>03</span><strong>ADVANCE</strong><small>Show your progress</small></div>
+            <div class="orbital-ring ring-one"></div>
+            <div class="orbital-ring ring-two"></div>
+            <div class="orbital-ring ring-three"></div>
+            <div class="scene-core"><span>BIT</span><small>LEARN · BUILD · ADVANCE</small></div>
+          </div>
+          <img id="heroImage" class="hero-image" src="hero.webp" alt="Three-dimensional futuristic learning workstation with glass panels and luminous orbital rings" width="1536" height="1024">
+          <canvas id="orbit" aria-hidden="true"></canvas>
+          <div class="visual-label"><span>IMMERSIVE LEARNING SYSTEM</span><span>01 / BIT</span></div>
+          <div class="floating-label"><span class="float-icon">↗</span><div>Made for the next generation<small>Technology · Creativity · Opportunity</small></div></div>
+          <button id="motionToggle" class="motion-control" aria-pressed="false">Pause motion</button>
+        </div>
+      </div>
+
+      <div class="facts wrap">
+        <div><strong>18</strong><span>Course pathways</span></div>
+        <div><strong>06</strong><span>Areas to explore</span></div>
+        <div><strong>3D</strong><span>Dynamic learning space</span></div>
+        <a href="#verify"><span class="fact-icon">▧</span><span>Check a BIT certificate<strong>Open verification ↗</strong></span></a>
+      </div>
+
+      <section class="section wrap">
+        <div class="section-heading"><div><p class="eyebrow">FIND YOUR DIRECTION</p><h2>A skill for every ambition.</h2></div><a href="#courses" class="text-link">View all 18 courses <span>↗</span></a></div>
+        <div class="course-grid" id="featuredCourses"></div>
+        <p class="catalogue-note">Illustrative programme catalogue. Final fees, schedules and course availability are to be confirmed by the institute.</p>
+      </section>
+
+      <section class="experience-strip wrap">
+        <div class="strip-copy"><p class="eyebrow">THE BIT LEARNING LOOP</p><h2>Learn. Create. <em>Grow.</em></h2><p>Move from an idea to a useful project through a focused path that respects your starting point.</p><a href="#about" class="text-link">See the BIT approach <span>→</span></a></div>
+        <div class="loop-visual" aria-label="Three steps: understand, practise and create"><div class="loop-orbit"></div><div class="loop-node node-one"><span>01</span><strong>UNDERSTAND</strong></div><div class="loop-node node-two"><span>02</span><strong>PRACTISE</strong></div><div class="loop-node node-three"><span>03</span><strong>CREATE</strong></div></div>
+      </section>
+
+      <section class="approach-banner wrap"><span class="eyebrow">LEARN. CREATE. GROW.</span><h2>Your potential.<br><em>A new perspective.</em></h2><p>Discover a learning path that connects the fundamentals with work you can actually show.</p><a href="#about" class="button button-light">The BIT approach <span>↗</span></a><span class="banner-index">BHARAT / TECHNOLOGY / POSSIBILITIES</span></section>
+    </section>
+
+    <section id="courses" class="view wrap page" hidden>
+      <div class="page-heading"><p class="eyebrow">EXPLORE YOUR POSSIBILITIES</p><h1>Find your <em>next skill.</em></h1><p>Explore 18 programmes across six areas. Open a course to see the proposed curriculum and practical project.</p></div>
+      <div class="catalogue-controls"><label class="search-box"><span aria-hidden="true">⌕</span><input id="courseSearch" type="search" placeholder="Search courses, skills or software" aria-label="Search courses"></label><label class="sort-label">Sort by <select id="courseSort"><option value="featured">Featured</option><option value="title">Course name</option><option value="duration">Shortest first</option></select></label></div>
+      <div class="filters" id="categoryFilters" aria-label="Filter courses by area"></div>
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+      <div id="allCourses" class="course-grid"></div>
+      <div id="emptyCourses" class="empty-state" hidden><h2>No courses found.</h2><p>Try a different keyword or choose another area.</p><button class="button" id="clearFilters">Clear filters</button></div>
+      <p class="catalogue-note">Curricula and durations are proposed. Confirm availability, fees and any external examination requirements with the institute before enrolling. No external accreditation is implied.</p>
+    </section>
+
+    <section id="about" class="view wrap page" hidden>
+      <div class="page-heading"><p class="eyebrow">THE BIT APPROACH</p><h1>Knowledge is a start.<br><em>Putting it to work is next.</em></h1><p>Bharat Institute of Technology brings computer foundations, creative tools and emerging technology into one practical course catalogue.</p></div>
+      <div class="steps"><article><span>01 / UNDERSTAND</span><h2>Start with clarity.</h2><p>Choose a subject that fits your starting point. Each course includes an outline, suggested duration and entry level.</p></article><article><span>02 / PRACTISE</span><h2>Make it tangible.</h2><p>Move from concepts to hands-on exercises, from a spreadsheet you can use to a website you can demonstrate.</p></article><article><span>03 / CREATE</span><h2>Show your progress.</h2><p>Work towards a course project that brings your new skills together and gives you something concrete to share.</p></article></div>
+      <div class="principles"><div><span>THE BIT PRINCIPLE</span><h2>Small, useful steps compound.</h2></div><p>Good learning is not only about collecting topics. It is about turning each new idea into a decision, a practice and something you can explain.</p></div>
+      <div class="about-bottom"><h2>Every expert was<br>once a beginner.</h2><a class="button" href="#courses">Find your starting point ↗</a></div>
+    </section>
+
+    <section id="certificates" class="view wrap page" hidden>
+      <div class="page-heading compact"><p class="eyebrow">CERTIFICATE STUDIO</p><h1>Make achievement <em>tangible.</em></h1><p>Only an authorised BIT administrator can create a certificate. Each record receives a verification link and QR code.</p></div>
+      <div id="certificateGate" class="access-wall"><div class="access-icon">BIT</div><div><span class="eyebrow">ADMIN CONTROLLED</span><h2>Certificate creation is locked.</h2><p>Sign in through the administrator panel to create, export or manage institute-issued records.</p><a class="button" href="#admin">Open admin login <span>↗</span></a></div></div>
+      <div id="certificateWorkspace" class="studio" hidden>
+        <form id="certificateForm" class="studio-panel">
+          <div class="panel-heading"><h2>Create a certificate</h2><span>ADMIN / 01</span></div>
+          <label>Student’s full name<input name="student" maxlength="70" placeholder="Enter full name" required></label>
+          <label>Course<select name="course" required id="certificateCourse"></select></label>
+          <div class="form-row"><label>Completion date<input name="date" type="date" required></label><label>Certificate number<input name="number" maxlength="40" placeholder="BIT-2026-001" required pattern="[A-Za-z0-9/._-]+" title="Use letters, numbers, hyphens, slashes, dots or underscores"></label></div>
+          <label>Authorised signatory<input name="signatory" maxlength="60" placeholder="Name of authorised signatory" required></label>
+          <label>Colour theme<select name="theme"><option value="navy">Classic navy & gold</option><option value="green">Emerald & gold</option></select></label>
+          <div class="form-actions"><button type="submit" class="button full">Create certificate <span>↗</span></button><button type="button" id="printCertificate" class="button button-outline full">Print / Save PDF <span>↗</span></button></div>
+          <p class="form-note">This academic project uses a browser-side demo registry. Connect a server database and real authentication before issuing certificates in production.</p><p id="certificateStatus" role="status"></p>
+        </form>
+        <div class="preview-panel"><div class="preview-top"><span>LIVE PREVIEW</span><span>A4 · LANDSCAPE · QR ENABLED</span></div><div class="certificate-scale"><article id="certificatePreview" class="certificate"><div class="cert-inner"><div class="cert-top"><span class="cert-monogram">BIT</span><div>BHARAT INSTITUTE<span>OF TECHNOLOGY</span></div><span class="cert-est">KNOWLEDGE<br>INTO POSSIBILITY</span></div><div class="cert-rule"></div><p class="cert-label">CERTIFICATE OF COMPLETION</p><p class="cert-intro">This is to certify that</p><h2 id="previewStudent">Student Name</h2><p class="cert-body">has successfully completed the course</p><h3 id="previewCourse">Diploma in Computer Applications</h3><p class="cert-body">at Bharat Institute of Technology.</p><div class="cert-footer"><div><strong id="previewDate">Completion date</strong><span>DATE OF COMPLETION</span></div><div class="cert-seal">B I T<span>EXCELLENCE<br>IN LEARNING</span></div><div><strong id="previewSignatory">Authorised signatory</strong><span>SIGNATURE REQUIRED</span></div></div><div class="cert-meta"><span id="previewNumber">Certificate no. —</span><span>Institute-issued certificate · Verify with QR</span></div><img id="previewQr" class="certificate-qr" alt="Certificate verification QR code" width="116" height="116"></div></article></div><div class="preview-note"><span>QR</span><p id="qrNote">Create a record to generate its verification QR code.</p></div></div>
+      </div>
+    </section>
+
+    <section id="verify" class="view wrap page" hidden>
+      <div class="page-heading compact"><p class="eyebrow">PUBLIC VERIFICATION</p><h1>Check a BIT <em>certificate.</em></h1><p>Enter the certificate number or open a QR verification link. The result shows the signed certificate details and any local register status.</p></div>
+      <div class="verify-layout"><form id="verifyForm" class="verify-search"><label for="verifyInput">Certificate number or verification data</label><div class="verify-input-row"><input id="verifyInput" name="verifyInput" placeholder="Example: BIT-2026-0001" autocomplete="off"><button class="button" type="submit">Verify <span>↗</span></button></div><p class="form-note">For a real public registry, connect this screen to a server-backed certificate database before issuing official records.</p></form><div id="verifyResult" class="verify-result neutral"><div class="result-mark">?</div><h2>Ready to verify</h2><p>Enter a certificate number or scan a BIT QR code.</p></div></div>
+    </section>
+
+    <section id="admin" class="view wrap page" hidden>
+      <div class="page-heading compact"><p class="eyebrow">CONTROL CENTRE</p><h1>BIT <em>admin.</em></h1><p>Manage certificate creation from one focused workspace.</p></div>
+      <div id="adminLogin" class="admin-login"><div class="admin-lock"><span>BIT</span><small>PRIVATE CONTROL</small></div><form id="adminLoginForm"><label for="adminPassword">Administrator password</label><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Enter administrator password" required><button class="button full" type="submit">Unlock certificate studio <span>↗</span></button><p id="adminLoginStatus" class="form-note" role="status">Authorised administrators only.</p></form></div>
+      <div id="adminDashboard" class="admin-dashboard" hidden><div class="dashboard-top"><div><span class="eyebrow">SIGNED IN</span><h2>Certificate operations</h2></div><div class="dashboard-actions"><a class="button button-outline" href="#certificates">Create certificate <span>↗</span></a><button class="button button-ghost" id="adminLogout">Sign out</button></div></div><div class="admin-stats"><div><span>Records</span><strong id="statTotal">0</strong></div><div><span>Active</span><strong id="statActive">0</strong></div><div><span>Revoked</span><strong id="statRevoked">0</strong></div></div><div class="register-heading"><div><span class="eyebrow">CERTIFICATE REGISTER</span><h2>Recent records</h2></div><label class="search-box register-search"><span aria-hidden="true">⌕</span><input id="registrySearch" type="search" placeholder="Search name or number" aria-label="Search certificate register"></label></div><div id="certificateRegister" class="certificate-register"></div><p class="form-note admin-warning">Browser-side demo register: records and revocation status are saved only on this device until a server database is connected.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><a href="#home" class="brand"><span class="brand-mark">B<span>IT</span></span><span class="brand-name">BHARAT INSTITUTE<span>OF TECHNOLOGY</span></span></a><p>Build what comes next.</p><span>© <span id="year"></span> Bharat Institute of Technology</span></footer>
+
+  <dialog id="courseDialog" aria-labelledby="dialogTitle"><button class="dialog-close" id="closeDialog" aria-label="Close course details">×</button><div id="courseDetail"></div></dialog>
+</body>
+</html>
