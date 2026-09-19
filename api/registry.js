@@ -28,7 +28,8 @@ export function createHandler(command = redis) {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     const send = (status, value) => res.status(status).json(value);
     try {
-      const password = process.env.ADMIN_PASSWORD;
+      // Accept the existing production secret name without exposing or rotating its value.
+      const password = process.env.ADMIN_PASSWORD || process.env.Sunil;
       if (!password || !(process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) || !(process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN) || !process.env.SITE_URL) throw fail(503, 'Online certificate verification is not configured yet. Please contact the institute.');
       const origin = new URL(process.env.SITE_URL).origin;
       const action = req.query?.action || 'session';
