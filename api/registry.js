@@ -4,8 +4,8 @@ const TABLE = 'bit:certificates:v3';
 const hash = text => createHash('sha256').update(text).digest('hex');
 const fail = (status, message) => Object.assign(new Error(message), { status });
 async function redis(...command) {
-  const response = await fetch(process.env.UPSTASH_REDIS_REST_URL, {
-    method: 'POST', headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}`, 'Content-Type': 'application/json' },
+  const response = await fetch((process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL), {
+    method: 'POST', headers: { Authorization: `Bearer ${(process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN)}`, 'Content-Type': 'application/json' },
     body: JSON.stringify(command), signal: AbortSignal.timeout(8000)
   });
   if (!response.ok) throw fail(503, 'Certificate service is temporarily unavailable. Please try again.');
@@ -29,7 +29,7 @@ export function createHandler(command = redis) {
     const send = (status, value) => res.status(status).json(value);
     try {
       const password = process.env.ADMIN_PASSWORD;
-      if (!password || !process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN || !process.env.SITE_URL) throw fail(503, 'Online certificate verification is not configured yet. Please contact the institute.');
+      if (!password || !(process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) || !(process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN) || !process.env.SITE_URL) throw fail(503, 'Online certificate verification is not configured yet. Please contact the institute.');
       const origin = new URL(process.env.SITE_URL).origin;
       const action = req.query?.action || 'session';
       const method = req.method;
